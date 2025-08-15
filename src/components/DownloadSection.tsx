@@ -70,12 +70,14 @@ const DownloadSection = () => {
       size: 'One Click',
       action: () => {
         // Check if Chrome Web Store is available
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if (typeof (window as any).chrome !== 'undefined' && (window as any).chrome.webstore) {
           // This would work if hosted on Chrome Web Store
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (window as any).chrome.webstore.install(
             'your-extension-id', 
             () => console.log('Installed successfully'),
-            (error: any) => {
+            (error: unknown) => {
               console.log('Installation failed:', error)
               // Fallback to manual download
               handleDirectDownload()
