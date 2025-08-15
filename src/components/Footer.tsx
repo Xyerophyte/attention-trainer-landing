@@ -38,10 +38,10 @@ const Footer = () => {
       { name: 'Security', href: '#' }
     ],
     community: [
-      { name: 'GitHub', href: 'https://github.com', external: true },
-      { name: 'Discussions', href: 'https://github.com', external: true },
-      { name: 'Bug Reports', href: 'https://github.com', external: true },
-      { name: 'Feature Requests', href: 'https://github.com', external: true }
+      { name: 'GitHub', href: 'https://github.com/Xyerophyte/attention-trainer-landing', external: true },
+      { name: 'Discussions', href: 'https://github.com/Xyerophyte/attention-trainer-landing/discussions', external: true },
+      { name: 'Bug Reports', href: 'https://github.com/Xyerophyte/attention-trainer-landing/issues', external: true },
+      { name: 'Feature Requests', href: 'https://github.com/Xyerophyte/attention-trainer-landing/issues/new?template=feature_request.md', external: true }
     ]
   }
 
@@ -106,7 +106,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <motion.a
-                href="https://github.com"
+                href="https://github.com/Xyerophyte/attention-trainer-landing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"

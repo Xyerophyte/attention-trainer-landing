@@ -99,7 +99,7 @@ const Navbar = () => {
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <motion.a
-              href="https://github.com"
+              href="https://github.com/Xyerophyte/attention-trainer-landing"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"

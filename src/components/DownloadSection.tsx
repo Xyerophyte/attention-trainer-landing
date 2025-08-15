@@ -16,6 +16,7 @@ import {
   Check
 } from 'lucide-react'
 import { downloadFile } from '@/lib/utils'
+import { trackDownload, trackCTAClick, trackNavigation } from '@/lib/analytics'
 
 const DownloadSection = () => {
   const [isDownloading, setIsDownloading] = useState(false)
@@ -27,6 +28,10 @@ const DownloadSection = () => {
   const handleDirectDownload = async () => {
     setIsDownloading(true)
     setDownloadProgress(0)
+
+    // Track download event
+    trackDownload('direct_download')
+    trackCTAClick('download_extension')
 
     // Simulate download progress
     const interval = setInterval(() => {
@@ -53,54 +58,27 @@ const DownloadSection = () => {
     {
       id: 'direct',
       title: 'Direct Download',
-      description: 'Download the extension package directly',
+      description: 'Download the extension package directly and install manually',
       icon: Download,
       primary: true,
       size: '33 KB',
       action: handleDirectDownload,
-      badge: 'Recommended',
-      features: ['Instant access', 'No account needed', 'Works offline']
-    },
-    {
-      id: 'chrome-store',
-      title: 'Chrome Web Store',
-      description: 'One-click install from official Chrome Web Store',
-      icon: Chrome,
-      primary: true, // Make this primary when available
-      size: 'One Click',
-      action: () => {
-        // Check if Chrome Web Store is available
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (typeof (window as any).chrome !== 'undefined' && (window as any).chrome.webstore) {
-          // This would work if hosted on Chrome Web Store
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (window as any).chrome.webstore.install(
-            'your-extension-id', 
-            () => console.log('Installed successfully'),
-            (error: unknown) => {
-              console.log('Installation failed:', error)
-              // Fallback to manual download
-              handleDirectDownload()
-            }
-          )
-        } else {
-          // For now, redirect to preparation page
-          window.open('https://chrome.google.com/webstore/search/attention%20trainer', '_blank')
-        }
-      },
-      badge: 'Submitting Soon',
-      features: ['One-click install', 'Automatic updates', 'Verified by Google']
+      badge: 'Free Download',
+      features: ['Instant access', 'No account needed', 'Privacy focused', 'Works offline']
     },
     {
       id: 'github',
       title: 'GitHub Repository',
-      description: 'View source code and contribute',
+      description: 'View source code, report issues, and contribute',
       icon: Github,
       primary: false,
       size: 'Open Source',
-      action: () => window.open('https://github.com', '_blank'),
+      action: () => {
+        trackNavigation('github_repository')
+        window.open('https://github.com/Xyerophyte/attention-trainer-landing', '_blank')
+      },
       badge: 'For Developers',
-      features: ['Full source code', 'Issue tracking', 'Contribute']
+      features: ['Full source code', 'Issue tracking', 'Contribute', 'Documentation']
     }
   ]
 
@@ -183,7 +161,7 @@ const DownloadSection = () => {
         </motion.div>
 
         {/* Download Options */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
           {downloadOptions.map((option, index) => (
             <motion.div
               key={option.id}
