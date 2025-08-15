@@ -3,7 +3,9 @@ export const GA_TRACKING_ID = 'G-XXXXXXXXXX' // Replace with actual GA4 tracking
 
 // Track page views
 export const pageview = (url: string) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (typeof window !== 'undefined' && (window as any).gtag) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).gtag('config', GA_TRACKING_ID, {
       page_location: url,
     })
@@ -12,7 +14,9 @@ export const pageview = (url: string) => {
 
 // Track custom events
 export const event = (action: string, category: string, label?: string, value?: number) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (typeof window !== 'undefined' && (window as any).gtag) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).gtag('event', action, {
       event_category: category,
       event_label: label,
