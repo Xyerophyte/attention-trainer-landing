@@ -155,7 +155,7 @@ const HeroSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {stats.map((stat, index) => (
+        {stats.map((stat) => (
             <motion.div
               key={stat.label}
               className="flex flex-col items-center"

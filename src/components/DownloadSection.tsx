@@ -348,7 +348,7 @@ const DownloadSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <motion.div
               key={feature.title}
               className="text-center"

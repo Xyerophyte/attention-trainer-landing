@@ -103,7 +103,7 @@ const TestimonialsSection = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Join thousands of users who've transformed their digital habits with Attention Trainer
+            Join thousands of users who&apos;ve transformed their digital habits with Attention Trainer
           </p>
         </motion.div>
 
