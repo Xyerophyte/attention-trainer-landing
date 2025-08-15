@@ -130,7 +130,7 @@ const FeaturesSection = () => {
     'analytics': () => (
       <div className="bg-white rounded-lg border p-4">
         <div className="flex items-center justify-between mb-3">
-          <h4 className="font-semibold text-gray-800">Today's Activity</h4>
+          <h4 className="font-semibold text-gray-800">Today&apos;s Activity</h4>
           <TrendingUp className="w-4 h-4 text-green-500" />
         </div>
         <div className="space-y-2">
