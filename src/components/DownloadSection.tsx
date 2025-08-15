@@ -75,7 +75,7 @@ const DownloadSection = () => {
       size: 'Open Source',
       action: () => {
         trackNavigation('github_repository')
-        window.open('https://github.com/Xyerophyte/attention-trainer-landing', '_blank')
+        window.open('https://github.com/Xyerophyte/attention-trainer-extension', '_blank')
       },
       badge: 'For Developers',
       features: ['Full source code', 'Issue tracking', 'Contribute', 'Documentation']
