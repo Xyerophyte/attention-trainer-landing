@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { Play, Pause, RotateCcw, Monitor, Smartphone, Tablet, X } from 'lucide-react'
+import { Play, Pause, RotateCcw, Monitor, Smartphone, Tablet } from 'lucide-react'
 
 const InteractiveDemoSection = () => {
   const [currentDemo, setCurrentDemo] = useState('popup')
@@ -231,9 +231,9 @@ const InteractiveDemoSection = () => {
                           transition={{ delay: 0.3 }}
                         >
                           <h3 className="text-xl font-bold mb-2">Take a Break! 🌟</h3>
-                          <p className="mb-4">You've been scrolling for 5 minutes.</p>
+                          <p className="mb-4">You&apos;ve been scrolling for 5 minutes.</p>
                           <p className="text-sm opacity-90">
-                            Maybe it's time to focus on something important?
+                            Maybe it&apos;s time to focus on something important?
                           </p>
                         </motion.div>
                       </div>

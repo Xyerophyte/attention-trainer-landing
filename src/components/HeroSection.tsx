@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
 import { ArrowDown, Download, Play, Star, Users, Zap } from 'lucide-react'
 import { downloadFile } from '@/lib/utils'

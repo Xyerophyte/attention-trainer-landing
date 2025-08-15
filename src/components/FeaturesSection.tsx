@@ -6,13 +6,10 @@ import {
   Eye, 
   BarChart3, 
   Settings, 
-  Shield, 
-  Timer, 
   Brain,
   MousePointer,
   Zap,
-  TrendingUp,
-  Filter
+  TrendingUp
 } from 'lucide-react'
 
 const FeaturesSection = () => {

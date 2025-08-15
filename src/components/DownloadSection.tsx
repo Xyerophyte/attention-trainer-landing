@@ -15,7 +15,7 @@ import {
   Copy,
   Check
 } from 'lucide-react'
-import { downloadFile, formatBytes } from '@/lib/utils'
+import { downloadFile } from '@/lib/utils'
 
 const DownloadSection = () => {
   const [isDownloading, setIsDownloading] = useState(false)

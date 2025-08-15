@@ -160,10 +160,10 @@ const TestimonialsSection = () => {
                 ))}
               </div>
 
-              {/* Testimonial Text */}
-              <blockquote className="text-gray-700 mb-6 leading-relaxed">
-                "{testimonial.text}"
-              </blockquote>
+            {/* Testimonial Text */}
+            <blockquote className="text-gray-700 mb-6 leading-relaxed">
+              &ldquo;{testimonial.text}&rdquo;
+            </blockquote>
 
               {/* Highlight */}
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-3 mb-6">
