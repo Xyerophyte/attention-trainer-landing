@@ -64,7 +64,7 @@ const DownloadSection = () => {
       size: '33 KB',
       action: handleDirectDownload,
       badge: 'Free Download',
-      features: ['Instant access', 'No account needed', 'Privacy focused', 'Works offline']
+      features: ['✨ V2 with critical fixes', 'Enhanced reliability', 'Privacy focused', 'Works offline']
     },
     {
       id: 'github',
@@ -78,7 +78,7 @@ const DownloadSection = () => {
         window.open('https://github.com/Xyerophyte/attention-trainer-extension', '_blank')
       },
       badge: 'For Developers',
-      features: ['Full source code', 'Issue tracking', 'Contribute', 'Documentation']
+      features: ['✨ Latest V2 source code', '220+ automated tests', 'Issue tracking', 'Comprehensive docs']
     }
   ]
 
@@ -151,12 +151,12 @@ const DownloadSection = () => {
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
-              Get Started in 30 Seconds
+              Download V2 - Major Update!
             </span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose your preferred installation method and start transforming your browsing habits today.
+            Experience enhanced reliability with critical bug fixes, new shared modules, and enterprise-grade testing. Choose your preferred installation method.
           </p>
         </motion.div>
 

@@ -116,7 +116,7 @@ const HeroSection = () => {
         >
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
           <span className="text-sm font-medium text-gray-700">
-            🚀 Now Available - Free Download
+            🚀 <strong>V2 Released!</strong> Critical Fixes & New Features
           </span>
         </motion.div>
 
@@ -143,7 +143,7 @@ const HeroSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Transform your browsing habits with intelligent interventions, 
+          Transform your browsing habits with a more reliable and powerful set of intelligent interventions, 
           real-time analytics, and behavioral insights that help you 
           <span className="font-semibold text-blue-600"> regain control of your digital life</span>.
         </motion.p>
@@ -188,7 +188,7 @@ const HeroSection = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Download className="w-5 h-5 group-hover:animate-bounce" />
-            Download Free (33KB)
+            Download V2 (33KB)
             <motion.div
               className="w-2 h-2 bg-white rounded-full"
               animate={{
@@ -198,19 +198,18 @@ const HeroSection = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                ease: "easeInOut"
               }}
             />
           </motion.button>
 
           <motion.button
             onClick={scrollToFeatures}
-            className="group flex items-center gap-3 text-gray-700 hover:text-blue-600 font-medium px-6 py-4 rounded-full border border-gray-300 hover:border-blue-300 transition-all duration-300"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="group bg-transparent text-gray-700 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center gap-3 hover:bg-gray-100"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <Play className="w-5 h-5" />
-            See How It Works
+            <ArrowDown className="w-5 h-5 group-hover:animate-bounce" />
+            What's New?
           </motion.button>
         </motion.div>
 
